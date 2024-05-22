@@ -9,22 +9,22 @@ export default {
         .max(10)
         .items(
           Joi.object({
-            value: Joi.string().min(2).max(24).required()
-          })
-        )
-    })
+            value: Joi.string().min(2).max(24).required(),
+          }),
+        ),
+    }),
   },
   getPoll: {
     [Segments.PARAMS]: Joi.object({
-      pollId: Joi.string().length(24).required()
-    })
+      pollId: Joi.string().length(24).required(),
+    }),
   },
   votePoll: {
     [Segments.PARAMS]: Joi.object({
-      pollId: Joi.string().length(24).required()
+      pollId: Joi.string().length(24).required(),
     }),
     [Segments.BODY]: Joi.object({
-      optionId: Joi.string().length(8).required()
-    })
-  }
+      optionId: Joi.string().length(8).required(),
+    }),
+  },
 };
