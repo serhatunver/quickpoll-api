@@ -6,8 +6,8 @@ const createSocketServer = (httpServer) => {
   socketServer = new Server(httpServer, {
     cors: {
       origin: '*',
-      methods: ['GET', 'POST', 'OPTIONS']
-    }
+      methods: ['GET', 'POST', 'OPTIONS'],
+    },
   });
 
   socketServer.on('connection', (socket) => {

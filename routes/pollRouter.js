@@ -7,24 +7,24 @@ import rateLimiter from '../middlewares/rateLimiter.js';
 const router = express.Router();
 
 router.get(
-  '/polls/:pollId',
+  '/:pollId',
   rateLimiter(60, 20, 'Too many requests, please try again later'),
   celebrate(pollValidation.getPoll),
-  pollController.getPoll
+  pollController.getPoll,
 );
 
 router.post(
-  '/polls',
+  '/',
   rateLimiter(60, 2, "You've reached the maximum number of polls"),
   celebrate(pollValidation.createPoll),
-  pollController.createPoll
+  pollController.createPoll,
 );
 
 router.post(
-  '/polls/:pollId/vote',
+  '/:pollId/vote',
   rateLimiter(60, 2, 'Too many requests, please try again later'),
   celebrate(pollValidation.votePoll),
-  pollController.votePoll
+  pollController.votePoll,
 );
 
 export default router;
