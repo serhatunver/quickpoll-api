@@ -3,8 +3,8 @@ import status from 'http-status';
 import { socketServer } from '../socket.js';
 
 const createPoll = async (req, res) => {
+  const { question, options } = req.body;
   try {
-    const { question, options } = req.body;
     const savedPoll = await pollService.CreatePoll({ question, options });
     res.status(status.CREATED).json(savedPoll);
   } catch (err) {
