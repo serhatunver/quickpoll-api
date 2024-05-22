@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/polls', pollRouter);
+app.use('/api/v1/polls', pollRouter);
 app.use(errors());
 
 // catch 404 and forward to error handler
