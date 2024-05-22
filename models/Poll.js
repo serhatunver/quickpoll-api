@@ -8,7 +8,7 @@ const Poll = new mongoose.Schema(
       type: String,
       required: [true, 'Question required'],
       minLenght: 5,
-      maxLength: 120
+      maxLength: 120,
     },
     options: [
       {
@@ -17,16 +17,16 @@ const Poll = new mongoose.Schema(
           type: String,
           required: [true, 'Option required'],
           minlength: 2,
-          maxLength: 24
+          maxLength: 24,
         },
-        votes: { type: Number, default: 0 }
-      }
-    ]
+        votes: { type: Number, default: 0 },
+      },
+    ],
   },
   {
     timestamps: true,
-    versionKey: false
-  }
+    versionKey: false,
+  },
 );
 
 export default new mongoose.model('Poll', Poll);

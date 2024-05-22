@@ -9,21 +9,25 @@
     "watch": "nodemon ./bin/www.js"
   },
   "dependencies": {
-    "celebrate": "^15.0.1",
+    "celebrate": "^15.0.3",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "debug": "^4.3.4",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.4.4",
     "express": "^4.18.2",
-    "express-rate-limit": "^6.7.0",
-    "helmet": "^6.0.1",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
     "http-errors": "^2.0.0",
-    "http-status": "^1.5.3",
-    "mongoose": "^6.7.5",
+    "http-status": "^1.7.3",
+    "mongoose": "^8.1.2",
     "morgan": "^1.10.0",
-    "nanoid": "^4.0.0",
+    "nanoid": "^5.0.5",
     "pug": "^3.0.2",
-    "socket.io": "^4.5.4"
+    "socket.io": "^4.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "prettier": "3.2.5"
   }
 }
