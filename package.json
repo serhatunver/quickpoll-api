@@ -1,6 +1,6 @@
 {
-  "name": "backend",
-  "version": "0.0.0",
+  "name": "quickpoll-api",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -29,5 +29,9 @@
   "devDependencies": {
     "nodemon": "^3.0.3",
     "prettier": "3.2.5"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
   }
 }
