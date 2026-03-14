@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { config } from '../config/index.js';
 
-const mongoURI = `mongodb+srv://${config.db.username}:${config.db.password}@${config.db.host}/${config.db.options}`;
+const mongoURI = config.mongoURI;
 
 const connectMongo = async () => {
   try {
